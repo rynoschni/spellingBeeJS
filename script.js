@@ -51,7 +51,6 @@ addButton.innerHTML = "ADD";
 document.addEventListener("DOMContentLoaded", (e) => {
   setTimeout(() => {
     letterDiv.appendChild(addButton);
-    
   }, 1500);
 
   console.log("DOM LOADED");
@@ -109,9 +108,29 @@ e_button.addEventListener("click", (e) => {
   console.log("button clicked", clickedLetter);
 });
 
-
-
 //add a function to take your word from the word div and add it to an Array to then add to your Words Bank
 
+const wordsBankArray = []
+
+let wordCount = 0
+
+foundTitleDiv.innerHTML = `You have found ${wordCount} words!`;
+console.log('wordCount', wordCount)
+wordsBankDiv.appendChild(foundTitleDiv);
+
+addButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  wordsBankArray.push(wordDiv.innerHTML)
+  console.log("wordsBankArray", wordsBankArray)
+
+   let wordMapDIV = document.createElement('div');
+      wordMapDIV.setAttribute('id', `${wordCount}`);
+      wordMapDIV.className = 'words-bank';
+  wordMapDIV.innerHTML = wordsBankArray[`${wordCount}`];
+  wordsBankDiv.appendChild(wordMapDIV);
+  wordCount++;
+  foundTitleDiv.innerHTML = `You have found ${wordCount} words!`;
+  wordDiv.innerHTML = '';
+})
 
 
