@@ -72,7 +72,42 @@ document.addEventListener("DOMContentLoaded", (e) => {
 })();
 
 //write the function to take a letter and add to your word div
+let clickedLetter = ''
 
+a_button.addEventListener('click', (e) => {
+  e.preventDefault();
+  clickedLetter = a_button.value
+  wordDiv.innerHTML += clickedLetter
+  console.log("button clicked",clickedLetter)
+})
+
+b_button.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickedLetter = b_button.value;
+  wordDiv.innerHTML += clickedLetter;
+  console.log("button clicked", clickedLetter);
+});
+
+c_button.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickedLetter = c_button.value;
+  wordDiv.innerHTML += clickedLetter;
+  console.log("button clicked", clickedLetter);
+});
+
+d_button.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickedLetter = d_button.value;
+  wordDiv.innerHTML += clickedLetter;
+  console.log("button clicked", clickedLetter);
+});
+
+e_button.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickedLetter = e_button.value;
+  wordDiv.innerHTML += clickedLetter;
+  console.log("button clicked", clickedLetter);
+});
 
 
 
