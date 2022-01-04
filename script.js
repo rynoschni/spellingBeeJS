@@ -50,30 +50,11 @@ addButton.innerHTML = "ADD";
 //** NOTE: setTimeout is just to slow the load so you can see it. but you could use it to add a CSS loaders and other neat stuff!! :)
 
 //using EventListener "DOMContentLoaded", load the add buttons
-document.addEventListener("DOMContentLoaded", (e) => {
-  setTimeout(() => {
-    gameDiv.appendChild(addButton);
-  }, 3500);
 
-  console.log("DOM LOADED");
-});
 
 //using an IIFE, load the letter button
 //Why did I put the letters in the IFFE??  HINT: LOOK AT THE CONSOLE LOG AND SEE WHEN IT FIRES.
 
-(() => {
-  console.log("IFFE LOADED");
-  setTimeout(() => {
-    loadDiv.classList.toggle("hide");
-    wordDiv.classList.toggle("hide");
-    wordsBankDiv.classList.toggle("hide");
-    letterDiv.appendChild(a_button);
-    letterDiv.appendChild(b_button);
-    letterDiv.appendChild(c_button);
-    letterDiv.appendChild(d_button);
-    letterDiv.appendChild(e_button);
-  }, 3000);
-})();
 
 //Step-3 write the listeners to take a letter and add to your word div
 
