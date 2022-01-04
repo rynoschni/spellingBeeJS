@@ -51,7 +51,6 @@ addButton.innerHTML = "ADD";
 document.addEventListener("DOMContentLoaded", (e) => {
   setTimeout(() => {
     letterDiv.appendChild(addButton);
-    
   }, 1500);
 
   console.log("DOM LOADED");
@@ -72,11 +71,66 @@ document.addEventListener("DOMContentLoaded", (e) => {
 })();
 
 //write the function to take a letter and add to your word div
+let clickedLetter = ''
 
+a_button.addEventListener('click', (e) => {
+  e.preventDefault();
+  clickedLetter = a_button.value
+  wordDiv.innerHTML += clickedLetter
+  console.log("button clicked",clickedLetter)
+})
 
+b_button.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickedLetter = b_button.value;
+  wordDiv.innerHTML += clickedLetter;
+  console.log("button clicked", clickedLetter);
+});
 
+c_button.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickedLetter = c_button.value;
+  wordDiv.innerHTML += clickedLetter;
+  console.log("button clicked", clickedLetter);
+});
+
+d_button.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickedLetter = d_button.value;
+  wordDiv.innerHTML += clickedLetter;
+  console.log("button clicked", clickedLetter);
+});
+
+e_button.addEventListener("click", (e) => {
+  e.preventDefault();
+  clickedLetter = e_button.value;
+  wordDiv.innerHTML += clickedLetter;
+  console.log("button clicked", clickedLetter);
+});
 
 //add a function to take your word from the word div and add it to an Array to then add to your Words Bank
 
+const wordsBankArray = []
+
+let wordCount = 0
+
+foundTitleDiv.innerHTML = `You have found ${wordCount} words!`;
+console.log('wordCount', wordCount)
+wordsBankDiv.appendChild(foundTitleDiv);
+
+addButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  wordsBankArray.push(wordDiv.innerHTML)
+  console.log("wordsBankArray", wordsBankArray)
+
+   let wordMapDIV = document.createElement('div');
+      wordMapDIV.setAttribute('id', `${wordCount}`);
+      wordMapDIV.className = 'words-bank';
+  wordMapDIV.innerHTML = wordsBankArray[`${wordCount}`];
+  wordsBankDiv.appendChild(wordMapDIV);
+  wordCount++;
+  foundTitleDiv.innerHTML = `You have found ${wordCount} words!`;
+  wordDiv.innerHTML = '';
+})
 
 
