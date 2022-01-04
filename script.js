@@ -47,18 +47,18 @@ addButton.classList.add("button", "is-black");
 addButton.innerHTML = "ADD";
 
 //write the function to add the buttons to your HTML on page load
-//** NOTE: setTimeout is just to slow the load so you can see it. but you could use it to add a CSS loader!! :)
+//** NOTE: setTimeout is just to slow the load so you can see it. but you could use it to add a CSS loaders and other neat stuff!! :)
 
 //using EventListener "DOMContentLoaded", load the add buttons
 document.addEventListener("DOMContentLoaded", (e) => {
   setTimeout(() => {
     gameDiv.appendChild(addButton);
-  }, 2500);
+  }, 3500);
 
   console.log("DOM LOADED");
 });
 
-//using an IFFE, load the letter button
+//using an IIFE, load the letter button
 //Why did I put the letters in the IFFE??  HINT: LOOK AT THE CONSOLE LOG AND SEE WHEN IT FIRES.
 
 (() => {
@@ -72,10 +72,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
     letterDiv.appendChild(c_button);
     letterDiv.appendChild(d_button);
     letterDiv.appendChild(e_button);
-  }, 2000);
+  }, 3000);
 })();
 
-//write the function to take a letter and add to your word div
+//write the listeners to take a letter and add to your word div
 let clickedLetter = ''
 
 a_button.addEventListener('click', (e) => {
@@ -130,7 +130,7 @@ addButton.addEventListener('click', (e) => {
 
    let wordMapDIV = document.createElement('div');
       wordMapDIV.setAttribute('id', `${wordCount}`);
-      wordMapDIV.className = 'words-bank';
+      wordMapDIV.className = 'is-size-2';
   wordMapDIV.innerHTML = wordsBankArray[`${wordCount}`];
   wordsBankDiv.appendChild(wordMapDIV);
   wordCount++;
