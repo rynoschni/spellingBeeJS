@@ -49,27 +49,3 @@ Next, lets add the listeners to add the letters from our buttons to the ***word 
 
   1. Create an empty variable to "store" your clicked letter.
   2. Make an ***event listener*** for each of your 6 letter buttons.  Use the value we set in Step 1 and the empty variable to append the ***word DIV innerHTML***.
-
-### Step 4
-
-Ok, so we have taken our basic HTML structure, added some letter buttons, gave them value, made it loaded the new items after a time out, and made the buttons function by clicking on them and adding it to a ***word DIV***.
-Now, we need to make it add to a ***words bank***.
-
-  1. Make an empty ***words bank array***.
-  2. Make a ***word counter***.
-  3. Add some innerHTML to the ***found title DIV*** using a Template Literal (hint: cash-curly).
-  4. Append this ***found title DIV*** to the ***words bank DIV***.  This just adds some words and a count to it.
-
-  5. Make an ***event listener*** for the ***ADD*** button!
-      1. It should ***push*** the innerHTML from the ***word DIV*** into our array.
-      2.  create a new ***DIV***, to store our new word in.
-      3. Set an attribute to this new DIV, giving it an ***id*** of the current value of the ***word counter***.  Also, add a class of ***is-size-2*** to it.
-      4. Using the counter number, set the innerHTML of your new DIV to the index from our array.
-      5. Append the new DIV to the ***word bank DIV***.
-      6. Increment the ***counter***.
-      7. Update your ***found title DIV*** innerHTML with the new count.
-      8. Empty your ***word DIV***.
-
-## THAT IS IT!! For now......
-
-
