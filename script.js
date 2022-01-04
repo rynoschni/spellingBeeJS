@@ -75,43 +75,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
   }, 3000);
 })();
 
-//write the listeners to take a letter and add to your word div
-let clickedLetter = ''
+//Step-3 write the listeners to take a letter and add to your word div
 
-a_button.addEventListener('click', (e) => {
-  e.preventDefault();
-  clickedLetter = a_button.value
-  wordDiv.innerHTML += clickedLetter
-  console.log("button clicked",clickedLetter)
-})
-
-b_button.addEventListener("click", (e) => {
-  e.preventDefault();
-  clickedLetter = b_button.value;
-  wordDiv.innerHTML += clickedLetter;
-  console.log("button clicked", clickedLetter);
-});
-
-c_button.addEventListener("click", (e) => {
-  e.preventDefault();
-  clickedLetter = c_button.value;
-  wordDiv.innerHTML += clickedLetter;
-  console.log("button clicked", clickedLetter);
-});
-
-d_button.addEventListener("click", (e) => {
-  e.preventDefault();
-  clickedLetter = d_button.value;
-  wordDiv.innerHTML += clickedLetter;
-  console.log("button clicked", clickedLetter);
-});
-
-e_button.addEventListener("click", (e) => {
-  e.preventDefault();
-  clickedLetter = e_button.value;
-  wordDiv.innerHTML += clickedLetter;
-  console.log("button clicked", clickedLetter);
-});
 
 //add a function to take your word from the word div and add it to an Array to then add to your Words Bank
 
