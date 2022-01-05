@@ -45,16 +45,34 @@ f_button.innerHTML = "F";
 
 const addButton = document.createElement('div');
 addButton.classList.add("button", "is-black");
+addButton.innerHTML = "ADD";
 
 //write the function to add the buttons to your HTML on page load
 //** NOTE: setTimeout is just to slow the load so you can see it. but you could use it to add a CSS loaders and other neat stuff!! :)
 
 //using EventListener "DOMContentLoaded", load the add buttons
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    gameDIV.appendChild(addButton);
+  }, 3500)
+});
 
-
-//using an IIFE, load the letter button
-//Why did I put the letters in the IFFE??  HINT: LOOK AT THE CONSOLE LOG AND SEE WHEN IT FIRES.
-
+  //using an IIFE, load the letter button
+  //Why did I put the letters in the IFFE??  HINT: LOOK AT THE CONSOLE LOG AND SEE WHEN IT FIRES.
+  (() => {
+    console.log("IIFE is loaded");
+    setTimeout(() => {
+      loadingBeeDIV.classList.toggle("hide");
+      wordDIV.classList.toggle("hide");
+      wordsBankDIV.classList.toggle("hide");
+      lettersDIV.appendChild(a_button);
+      lettersDIV.appendChild(b_button);
+      lettersDIV.appendChild(c_button);
+      lettersDIV.appendChild(d_button);
+      lettersDIV.appendChild(e_button);
+      lettersDIV.appendChild(f_button);
+    }, 3000);
+  })();
 
 //Step-3 write the listeners to take a letter and add to your word div
 
