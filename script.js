@@ -22,24 +22,32 @@ a_button.setAttribute("value", "A")
 a_button.innerHTML = "A"
 
 const b_button = document.createElement('button')
-a_button.classList.add("button", "is-warning", "m-2")
-a_button.innerHTML = "A"
+b_button.classList.add("button", "is-warning", "m-2")
+b_button.setAttribute("value", "B")
+b_button.innerHTML = "B"
 
 const c_button = document.createElement('button')
-a_button.classList.add("button", "is-warning", "m-2")
-a_button.innerHTML = "A"
+c_button.classList.add("button", "is-warning", "m-2")
+c_button.setAttribute("value", "C")
+c_button.innerHTML = "C"
 
 const d_button = document.createElement('button')
-a_button.classList.add("button", "is-warning", "m-2")
-a_button.innerHTML = "A"
+d_button.classList.add("button", "is-warning", "m-2")
+d_button.setAttribute("value", "D")
+d_button.innerHTML = "D"
 
 const e_button = document.createElement('button')
-a_button.classList.add("button", "is-warning", "m-2")
-a_button.innerHTML = "A"
+e_button.classList.add("button", "is-warning", "m-2")
+e_button.setAttribute("value", "E")
+e_button.innerHTML = "E"
 
 const f_button = document.createElement('button')
-a_button.classList.add("button", "is-warning", "m-2")
-a_button.innerHTML = "A"
+f_button.classList.add("button", "is-warning", "m-2")
+f_button.setAttribute("value", "F")
+f_button.innerHTML = "F"
+
+const addButton = document.createElement('div')
+addButton.classList.add("button", "is-black")
 
 //write the function to add the buttons to your HTML on page load
 //** NOTE: setTimeout is just to slow the load so you can see it. but you could use it to add a CSS loaders and other neat stuff!! :)
