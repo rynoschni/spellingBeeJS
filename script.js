@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   console.log("DOM LOADED");
 });
-
+//test commet
 //using an IIFE, load the letter button
 //Why did I put the letters in the IFFE??  HINT: LOOK AT THE CONSOLE LOG AND SEE WHEN IT FIRES.
 
