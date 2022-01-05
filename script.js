@@ -1,4 +1,3 @@
-"use strict";
 //get the div items in the game
 
 const gameBoardDiv = document.getElementById("gameboard");
@@ -47,28 +46,36 @@ f_button.innerHTML = "F";
 
 const addButton = document.createElement("div");
 addButton.classList.add("button", "is-black");
+addButton.innerHTML = "ADD";
 
 //write the function to add the buttons to your HTML on page load
 //** NOTE: setTimeout is just to slow the load so you can see it. but you could use it to add a CSS loaders and other neat stuff!! :)
 
-function addLetterButtons() {
-  document.body.appendChild(a_button);
-  document.body.appendChild(b_button);
-  document.body.appendChild(c_button);
-  document.body.appendChild(d_button);
-  document.body.appendChild(e_button);
-  document.body.appendChild(f_button);
-}
-
-function addTheButton() {
-  document.body.appendChild(addButton);
-}
-
 //using EventListener "DOMContentLoaded", load the add buttons
 
-window.addEventListener("DOMContentLoaded", addTheButton());
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("add button");
+  setTimeout(() => {
+    gameDiv.appendChild(addButton);
+  }, 3500);
+});
 
-window.addEventListener("DOMContentLoaded", addLetterButtons());
+// window.addEventListener("DOMContentLoaded", addLetterButtons());
+
+(() => {
+  console.log("iife loaded");
+  setTimeout(() => {
+    loadingBeeDiv.classList.toggle("hide");
+    wordDiv.classList.toggle("hide");
+    wordsBankDiv.classList.toggle("hide");
+    lettersDiv.appendChild(a_button);
+    lettersDiv.appendChild(b_button);
+    lettersDiv.appendChild(c_button);
+    lettersDiv.appendChild(d_button);
+    lettersDiv.appendChild(e_button);
+    lettersDiv.appendChild(f_button);
+  }, 3000);
+})();
 
 //using an IIFE, load the letter button
 //Why did I put the letters in the IFFE??  HINT: LOOK AT THE CONSOLE LOG AND SEE WHEN IT FIRES.
