@@ -1,50 +1,50 @@
 'use strict';
 //get the div items in the game
-const gameDiv = document.getElementById("game");
-const wordDiv = document.getElementById("word");
-const letterDiv = document.getElementById("letters");
-const loadDiv = document.getElementById("loadingBee");
+const gameBoardDIV = document.getElementById('gameboard');
+const loadingBeeDIV = document.getElementById('loadingBee');
+const gameDIV = document.getElementById('game');
+const wordDIV = document.getElementById('word');
+const lettersDIV = document.getElementById('letters');
 
 // get the div items in the wordsBank
-const wordsBankDiv = document.querySelector("#wordsBank");
-const foundTitleDiv = document.querySelector("#foundTitle");
-const wordsDiv = document.querySelector("#words");
+const wordsBankDIV = document.querySelector('#wordsBank');
+const foundTitle = document.querySelector('#foundTitle');
+const wordsDiv = document.querySelector('#word');
 
 //create your buttons
-const a_button = document.createElement("button");
-a_button.setAttribute("id", "a_button");
+const a_button = document.createElement('button');
+a_button.classList.add("button", "is-warning", "m-2");
 a_button.setAttribute("value", "A");
-a_button.classList.add("button","is-warning", "m-2");
-a_button.innerHTML = "A";
+a_button.innerHTML ="A";
 
-const b_button = document.createElement("button");
-b_button.setAttribute("id", "b_button");
-b_button.setAttribute("value", "B");
+const b_button = document.createElement('button');
 b_button.classList.add("button", "is-warning", "m-2");
-b_button.innerHTML = "B";
+b_button.setAttribute("value", "B");
+b_button.innerHTML ="B";
 
-const c_button = document.createElement("button");
-c_button.setAttribute("id", "c_button");
-c_button.setAttribute("value", "C");
-c_button.classList.add("button", "is-warning", "m-2");
-c_button.innerHTML = "C";
+const c_button = document.createElement('button');
+c_button.classList.add("button", "is -warning", "m-2");
+c_button.setAttribute("value", "c");
+c_button.innerHTML ="c";
 
-const d_button = document.createElement("button");
-d_button.setAttribute("id", "d_button");
-d_button.setAttribute("value", "D");
-d_button.classList.add("button", "is-warning", "m-2");
-d_button.innerHTML = "D";
+const d_button = document.createElement('button');
+d_button.classList.add("button", "is -warning", "m-2");
+d_button.setAttribute("value", "d");
+d_button.innerHTML ="d";
 
-const e_button = document.createElement("button");
-e_button.setAttribute("id", "e_button");
-e_button.setAttribute("value", "E");
-e_button.classList.add("button", "is-warning", "m-2");
-e_button.innerHTML = "E";
+const e_button = document.createElement('button');
+e_button.classList.add("button", "is -warning", "m-2");
+e_button.setAttribute("value", "e");
+e_button.innerHTML ="e";
 
-const addButton = document.createElement('div');
-addButton.setAttribute("id", "add-button");
+const F_button = document.createElement('button');
+F_button.classList.add("button", "is -warning", "m-2");
+F_button.setAttribute("value", "F");
+F_button.innerHTML ="F";
+
+
+const addButton = document.createElement('DIV');
 addButton.classList.add("button", "is-black");
-addButton.innerHTML = "ADD";
 
 //write the function to add the buttons to your HTML on page load
 //** NOTE: setTimeout is just to slow the load so you can see it. but you could use it to add a CSS loaders and other neat stuff!! :)
