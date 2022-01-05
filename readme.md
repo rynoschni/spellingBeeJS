@@ -30,7 +30,6 @@ First, we are going to add basic structure to our JS and then add the buttons we
 
  >NOTE:  YOU WILL NOT SEE THEM YET!!
 
-<<<<<<< HEAD
  ### Step 2
 
 Now that we have the elements available and the buttons in JS, lets first do a some content loading.  We are going to use two loaders just to show them both.  In practice, you probably would not do this.
@@ -43,8 +42,6 @@ Now that we have the elements available and the buttons in JS, lets first do a s
       - toggle a class hide for the ***loading DIV***, ***word DIV***, &  the ***words bank DIV***.  This will give animation feel.
       - appends your letter buttons to your ***letter DIV***.
 >NOTE:  The difference in the times is just to make the loading more visible.
-=======
  
 
 
->>>>>>> 48d8469746f574d3d6277375326b99b99d6a3933
