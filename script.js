@@ -15,42 +15,61 @@ const wordsDIV = document.querySelector('#words')
 const a_button = document.createElement('button');
 a_button.innerHTML = "A";
 a_button.classList.add("button", "is-warning?", "m-2");
-a_button.setAttribute.add("value", "A");
+a_button.setAttribute("value", "A");
 
-const a_button = document.createElement('button');
+const b_button = document.createElement('button');
 b_button.innerHTML = "B";
 b_button.classList.add("button", "is-warning?", "m-2");
-b_button.setAttribute.add("value", "B");
+b_button.setAttribute("value", "B");
 
-const a_button = document.createElement('button');
+const c_button = document.createElement('button');
 c_button.innerHTML = "C";
 c_button.classList.add("button", "is-warning?", "m-2");
-c_button.setAttribute.add("value", "C");
+c_button.setAttribute("value", "C");
 
-const a_button = document.createElement('button');
+const d_button = document.createElement('button');
 d_button.innerHTML = "D";
 d_button.classList.add("button", "is-warning?", "m-2");
-d_button.setAttribute.add("value", "D");
+d_button.setAttribute("value", "D");
 
-const a_button = document.createElement('button');
+const e_button = document.createElement('button');
 e_button.innerHTML = "E";
 e_button.classList.add("button", "is-warning?", "m-2");
-e_button.setAttribute.add("value", "E");
+e_button.setAttribute("value", "E");
 
-const a_button = document.createElement('button');
+const f_button = document.createElement('button');
 f_button.innerHTML = "F";
 f_button.classList.add("button", "is-warning?", "m-2");
-f_button.setAttribute.add("value", "F");
+f_button.setAttribute("value", "F");
+
+const addButton = document.createElement('div');
+addButton.classList.add("button", "is-black");
 
 //write the function to add the buttons to your HTML on page load
 //** NOTE: setTimeout is just to slow the load so you can see it. but you could use it to add a CSS loaders and other neat stuff!! :)
 
 //using EventListener "DOMContentLoaded", load the add buttons
-
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(()=>{
+        gameDIV.appendChild(addButton);
+    }, 3500);
+});
 
 //using an IIFE, load the letter button
 //Why did I put the letters in the IFFE??  HINT: LOOK AT THE CONSOLE LOG AND SEE WHEN IT FIRES.
-
+(() => {
+    setTimeout(() => {
+        loadingBeeDIV.classList.toggle("hide");
+        wordDIV.classList.toggle("hide");
+        wordsBankDIV.classList.toggle("hide");
+        lettersDIV.appendChild(a_button);
+        lettersDIV.appendChild(b_button);
+        lettersDIV.appendChild(c_button);
+        lettersDIV.appendChild(d_button);
+        lettersDIV.appendChild(e_button);
+        lettersDIV.appendChild(f_button);
+    }, 3000);
+})();
 
 //Step-3 write the listeners to take a letter and add to your word div
 
