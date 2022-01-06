@@ -1,4 +1,3 @@
-'use strict';
 //get the div items in the game
 const gameBoardDIV = document.getElementById('gameboard');
 const loadingBeeDIV = document.getElementById('loadingBee');
@@ -8,8 +7,8 @@ const lettersDIV = document.getElementById('letters');
 
 // get the div items in the wordsBank
 const wordsBankDIV = document.querySelector('#wordsBank');
-const foundTitle = document.querySelector('#foundTitle');
-const wordsDiv = document.querySelector('#word');
+const foundTitleDIV = document.querySelector('#foundTitle');
+const wordsDIV = document.querySelector('#words');
 
 //create your buttons
 const a_button = document.createElement('button');
@@ -37,20 +36,21 @@ e_button.classList.add("button", "is-warning", "m-2");
 e_button.setAttribute("value", "e");
 e_button.innerHTML ="e";
 
-const F_button = document.createElement('button');
-F_button.classList.add("button", "is-warning", "m-2");
-F_button.setAttribute("value", "F");
-F_button.innerHTML ="F";
+const f_button = document.createElement('button');
+f_button.classList.add("button", "is-warning", "m-2");
+f_button.setAttribute("value", "F");
+f_button.innerHTML ="F";
 
 
-const addButton = document.createElement('DIV');
+const addButton = document.createElement('Div');
 addButton.classList.add("button", "is-black");
+addButton.innerHTML = "ADD";
 
 //write the function to add the buttons to your HTML on page load
 //** NOTE: setTimeout is just to slow the load so you can see it. but you could use it to add a CSS loaders and other neat stuff!! :)
 
 //using EventListener "DOMContentLoaded", load the add buttons
-document.addEventListener("DOMcontentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     console.log("Hello");
     setTimeout(() => {
         gameDIV.appendChild(addButton);
@@ -69,9 +69,9 @@ document.addEventListener("DOMcontentLoaded", () => {
         lettersDIV.appendChild(c_button);
         lettersDIV.appendChild(d_button);
         lettersDIV.appendChild(e_button);
-        lettersDIV.appendChild(F_button);
-    },3000)
-});
+        lettersDIV.appendChild(f_button);
+    }, 3000);
+})();
 
 //Step-3 write the listeners to take a letter and add to your word div
 
