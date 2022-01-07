@@ -41,6 +41,12 @@ e_button.setAttribute("value", "E");
 e_button.classList.add("button", "is-warning", "m-2");
 e_button.innerHTML = "E";
 
+const f_button = document.createElement("button");
+f_button.setAttribute("id", "f_button");
+f_button.setAttribute("value", "F");
+f_button.classList.add("button", "is-warning", "m-2");
+f_button.innerHTML = "F";
+
 const addButton = document.createElement('div');
 addButton.setAttribute("id", "add-button");
 addButton.classList.add("button", "is-black");
@@ -114,7 +120,29 @@ f_button.addEventListener("click", (event) => { // e or event
   wordDiv.innerHTML += clickedLetter; //
   console.log(clickedLetter, 'button clicked')
 })
+
+
 //add a function to take your word from the word div and add it to an Array to then add to your Words Bank
 
+const wordsBankArray = []; // array to store the words
+let wordCount = 0; // we have 0 words for now
+foundTitleDiv.innerHTML = `You have found ${wordCount} words!`; //innerHtml is a DOM manipulation
+wordsBankDiv.appendChild(foundTitleDiv);
 
 
+addButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  wordsBankArray.push(wordDiv.innerHTML);
+  console.log("wordBankArray", wordsBankArray) // testing if submit button push words into the wordsBankArray
+
+  let newWordDiv = document.createElement("div");
+  newWordDiv.setAttribute('id', `${wordCount}`); //setAttribute is to add an id
+  //wordCount is the id for this div
+  newWordDiv.classList.add("is-size-2");
+  newWordDiv.innerHTML = wordsBankArray[wordCount];
+  wordsBankDiv.appendChild(newWordDiv);
+  wordCount ++;
+  foundTitleDiv.innerHTML = `You have found ${wordCount} words!`; //to change the message from 0 to what ever we have
+
+  wordDiv.innerHTML = "";
+})
