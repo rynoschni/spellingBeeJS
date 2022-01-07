@@ -76,8 +76,44 @@ document.addEventListener("DOMContentLoaded", (e) => {
 })();
 
 //Step-3 write the listeners to take a letter and add to your word div
+let clickedLetter = ''; //let beause it will be change
 
-
+a_button.addEventListener("click", (event) => { // e or event
+  event.preventDefault(); // it's to shutt the default behaviour that might the browser do
+  clickedLetter = a_button.value; // assign a value to clickedletter
+  wordDiv.innerHTML += clickedLetter; //
+  console.log(clickedLetter, 'button clicked')
+})
+b_button.addEventListener("click", (event) => { // e or event
+  event.preventDefault(); // it's to shutt the default behaviour that might the browser do
+  clickedLetter = b_button.value; // assign a value to clickedletter
+  wordDiv.innerHTML += clickedLetter; //
+  console.log(clickedLetter, 'button clicked')
+})
+c_button.addEventListener("click", (event) => { // e or event
+  event.preventDefault(); // it's to shutt the default behaviour that might the browser do
+  clickedLetter = c_button.value; // assign a value to clickedletter
+  wordDiv.innerHTML += clickedLetter; //
+  console.log(clickedLetter, 'button clicked')
+})
+d_button.addEventListener("click", (event) => { // e or event
+  event.preventDefault(); // it's to shutt the default behaviour that might the browser do
+  clickedLetter = d_button.value; // assign a value to clickedletter
+  wordDiv.innerHTML += clickedLetter; //
+  console.log(clickedLetter, 'button clicked')
+})
+e_button.addEventListener("click", (event) => { // e or event
+  event.preventDefault(); // it's to shutt the default behaviour that might the browser do
+  clickedLetter = e_button.value; // assign a value to clickedletter
+  wordDiv.innerHTML += clickedLetter; //
+  console.log(clickedLetter, 'button clicked')
+})
+f_button.addEventListener("click", (event) => { // e or event
+  event.preventDefault(); // it's to shutt the default behaviour that might the browser do
+  clickedLetter = f_button.value; // assign a value to clickedletter
+  wordDiv.innerHTML += clickedLetter; //
+  console.log(clickedLetter, 'button clicked')
+})
 //add a function to take your word from the word div and add it to an Array to then add to your Words Bank
 
 
