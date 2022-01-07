@@ -122,5 +122,25 @@ f_button.addEventListener("click", (event) => {
 
 //add a function to take your word from the word div and add it to an Array to then add to your Words Bank
 
+const wordsBankArray = [];
+let wordCount = 0;
+
+foundTitleH4.innerHTML = `You have found ${wordCount} words!`;
+wordsBankDIV.appendChild(foundTitleH4);
+
+addButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  wordsBankArray.push(wordDIV.innerHTML);
+  console.log("wordsBankArray", wordsBankArray);
+  
+  let newWordDiv = document.createElement("div");
+  newWordDiv.setAttribute('id', `${wordCount}`);
+  newWordDiv.classList.add("is-size-2");
+  newWordDiv.innerHTML = wordsBankArray[wordCount];
+  wordsBankDIV.appendChild(newWordDiv);
+  wordCount++;
+  foundTitleH4.innerHTML = `You have found ${wordCount} words!`;
+  wordDIV.innerHTML = "";
+})
 
 
